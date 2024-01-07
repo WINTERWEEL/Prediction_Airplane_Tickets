@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 
 import sys
-# sys.path.append('C:/Users/WINTER/Desktop/Python基础/report')
+sys.path.append('C:/Users/WINTER/Desktop/Python基础/report1/')
 
 class AirlineData(Dataset):
     """Dataset"""
@@ -14,7 +14,7 @@ class AirlineData(Dataset):
         self.tag = tag
 
         if self.tag=='train':
-            df = pd.read_csv("./train.csv",dtype=np.float64)
+            df = pd.read_csv("./Train.csv",dtype=np.float64)
         elif self.tag =='valid':
             df = pd.read_csv("./valid.csv",dtype=np.float64)
         else:

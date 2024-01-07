@@ -1,6 +1,6 @@
 import os
 import sys
-# sys.path.append('C:/Users/WINTER/Desktop/Python基础/report')
+sys.path.append('C:/Users/WINTER/Desktop/Python基础/report1/')
 import torch.utils.data
 import numpy as np
 from tqdm import tqdm
@@ -55,6 +55,8 @@ def train(args):
     loss_func=torch.nn.MSELoss(reduction='mean')
 
     # log
+    if not os.path.exists('./logs'):
+        os.mkdir('./logs')
     log_path = './logs/'+args.name+'.log'
     logfile = open(log_path, "a")
     logfile.write("epoch "+str(args.epoch)+"\n")
